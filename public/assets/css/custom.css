@@ -1,0 +1,250 @@
+:root {
+    --color: #35A99B;
+}
+
+.hero-bracket {
+    padding-top: 10px;
+}
+
+.content-hero {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-waves {
+    position: relative;
+    /* background-image: url("../img/hero1.jpg"); */
+    background: #182827;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-waves h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-waves p {
+    position: relative; 
+    z-index: 1;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+}
+
+/* ========================= */
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: var(--color);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+}
+
+.waves::before,
+.waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.waves::before {
+    border-radius: 44%;
+    background: #182827;
+    animation: waves 8s linear infinite;
+}
+
+.waves::after {
+    border-radius: 44%;
+    background: rgba(51, 51, 51, 0.5);;
+    animation: waves 15s linear infinite;
+}
+
+@keyframes waves {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+.card-product-body{
+    width: 100%;
+    height: 25em;
+    background: white;
+    color: #168f65;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.5s;
+    &:hover{
+        transform: scale(1);
+        box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    }
+    
+    .container-card-product{
+        width:100%;
+        height:100%;
+        
+        .bottom-card{
+            width: 100%;
+            height: 20%;
+            background-color: #ffffff;
+            position:relative;
+            float:left;
+            transition: transform 0.5s;
+            border-top:solid thin rgba(0,0,0,0.1);
+            &.clicked{
+                transform: translateX(-50%);
+            }
+            h4{
+                margin:0;
+                padding:0;
+            }
+            p{
+                margin:0;
+                padding:0;
+            }
+        }
+    }
+
+    .details-card{
+        padding: 10px;
+        float: left;
+        width: 70%;
+        height: 100%;
+        /* width: calc(70% - 20px); */
+    }
+    .buy-card{
+        float:right;
+        /* width: calc(30% - 2px); */
+        width: 30%;
+        height:100%;
+        background-color: #ffffff;
+        border-left:solid thin rgba(0,0,0,0.1);
+        i{
+            font-size:30px;
+            padding:30px;
+            transition: transform 0.5s;
+        }
+    }
+    
+    
+    /* .right-card{
+        width: 50%;
+        background: #67e2d4;
+        color: white;
+        float:right;
+        height:200%;
+        overflow: hidden;
+        .details-card{
+            padding: 20px;
+            float: right;
+            width: calc(70% - 40px);
+        }
+        .done-card{
+            width: calc(30% - 2px);
+            float:left;
+            transition: transform 0.5s;
+            border-right:solid thin rgba(255,255,255,0.3);
+            height:50%;
+            i{
+                font-size:30px;
+                padding:30px;
+                color: white;
+            }
+        }
+        .remove-card{
+        width: calc(30% - 1px);
+        clear: both;
+        border-right:solid thin rgba(255,255,255,0.3);
+        height:50%;
+        background: #BC3B59;
+        transition: transform 0.5s, background 0.5s;
+        &:hover{
+            background: #9B2847;
+        }
+        &:hover i{
+            transform: translateY(5px);
+        }
+        i{
+            transition: transform 0.5s;
+            font-size:30px;
+            padding:30px;
+            color: white;
+            }
+        }
+        &:hover{
+        .remove, .done{
+            transform: translateY(-100%);
+            }
+        }
+        } */
+
+    .inside{
+        z-index:9;
+        background: #168f65;
+        color: #ffffff;
+        font-size: 12px;
+        width:140px;
+        height:140px;
+        position: absolute;
+        top: -70px;
+        right: -70px;
+        border-radius: 0px 0px 200px 200px;
+        transition: all 0.5s, border-radius 2s, top 1s;
+        overflow: hidden;
+        .icon{
+            position:absolute;
+            right:85px;
+            top:85px;
+            color:white;
+            opacity: 1;
+        }
+        &:hover{
+            width:100%;
+            right:0;
+            top:0;
+            border-radius: 0;
+            height:80%;
+            .icon{
+                opacity: 0;
+                right:15px;
+                top:15px;
+            }
+            .contents{
+                opacity: 1;
+                transform: scale(1);
+                transform: translateY(0);
+            }
+        }
+    .contents{
+        padding: 5%;
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translateY(-200%);
+        transition: opacity 0.2s, transform 0.8s;
+        }
+    }
+}
