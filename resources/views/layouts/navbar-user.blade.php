@@ -89,7 +89,7 @@
         </li>
         <li class="dropdown">
             {{-- <a href="#" class="nav-link nav-link-lg nav-link-user">CONTACT</a> --}}
-            <a href="{{ url('logout') }}" class="nav-link nav-link-lg nav-link-user">LOGOUT</a>
+            <a href="{{ url('contact') }}" class="nav-link nav-link-lg nav-link-user">CONTACT</a>
         </li>
     </ul>
 </nav>

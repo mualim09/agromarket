@@ -1,19 +1,8 @@
 <div class="navbar-bg"></div>
 <nav class="navbar navbar-expand-lg main-navbar">
-    <a href="index.html" class="navbar-brand sidebar-gone-hide">Agromarket</a>
-    <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
-    <div class="nav-collapse">
-        <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">
-            <i class="fas fa-ellipsis-v"></i>
-        </a>
-        <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link">Indonesian Agricultural</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        </ul>
-    </div>
-    <form class="form-inline ml-auto">
-        <ul class="navbar-nav">
+    <form class="form-inline mr-auto">
+        <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
                         class="fas fa-search"></i></a></li>
         </ul>
@@ -234,39 +223,4 @@
             </div>
         </li>
     </ul>
-</nav>
-
-<nav class="navbar navbar-secondary navbar-expand-lg">
-    <div class="container">
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i
-                        class="fas fa-fire"></i><span>Pembibitan</span></a>
-                <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="index-0.html" class="nav-link">Benih Padi</a></li>
-                    <li class="nav-item"><a href="index-0.html" class="nav-link">Benih Sayuran</a></li>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Bibit Buah</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="far fa-heart"></i><span>Pestisida</span></a>
-                <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="index-0.html" class="nav-link">Insektisida</a></li>
-                    <li class="nav-item"><a href="index-0.html" class="nav-link">Fungisida</a></li>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Herbisida</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i
-                        class="far fa-clone"></i><span>Pupuk Organik</span></a>
-                <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">1</a></li>
-                    <li class="nav-item dropdown"><a href="#" class="nav-link has-dropdown">2</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link"><i class="far fa-heart"></i><span>Perlengkapan</span></a>
-            </li>
-        </ul>
-    </div>
 </nav>

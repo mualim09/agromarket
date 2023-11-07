@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Alert;
 
-class DUserController extends Controller
+class DashboardController extends Controller
 {
     public function index()
     {
@@ -19,6 +20,6 @@ class DUserController extends Controller
 
     public function seller()
     {
-        return view('dashboard.dashboard-user');
+        return view('dashboard.dashboard-seller');
     }
 }

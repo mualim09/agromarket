@@ -49,7 +49,7 @@ class RegisterController extends Controller
         
         if (Auth::attempt($login)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('dashboard-seller');
         }
 
         return redirect()->back()->with('loginError', 'Gagal Login !!');
